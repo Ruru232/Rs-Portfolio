@@ -27,10 +27,7 @@ export default function Navbar() {
         <div className="hidden md:flex lg:flex">
           <ul className="flex gap-4 xs:gap-5 md:gap-10">
             <li>
-              <Link href="/Projects/">Projects</Link>
-            </li>
-            <li>
-              <Link href="/Technologies">Tech-Stacks</Link>
+              <Link href="/Projects/">Projects & Tech Stacks</Link>
             </li>
             <li>
               <Link href="/About_Me">About Me</Link>
@@ -66,15 +63,9 @@ export default function Navbar() {
           <ul className="flex-col py-4 gap-4 xs:gap-5 md:gap-10">
             <li
               onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
+              className="py-4 text-xs cursor-pointer"
             >
-              <Link href="/Projects/">Projects</Link>
-            </li>
-            <li
-              onClick={() => setMenuOpen(false)}
-              className="py-4 cursor-pointer"
-            >
-              <Link href="/Technologies">Tech-Stacks</Link>
+              <Link href="/Projects/">Projects & Tech Stacks</Link>
             </li>
             <li
               onClick={() => setMenuOpen(false)}
