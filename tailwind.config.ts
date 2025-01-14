@@ -42,7 +42,7 @@ export default {
         },
       },
       screens: {
-        'xss': '320px',
+        'xss': '375px',
         'xs': '425',
         'sm': '640px',
         'md': '768px',

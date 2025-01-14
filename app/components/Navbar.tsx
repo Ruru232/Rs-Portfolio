@@ -15,7 +15,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className="fixed top-0 w-full h-24 shadow-xl bg-customBlack 2xl:px-[25%] xl:px-44 md:px-20 px-0 z-50">
+    <div className="fixed top-0 w-full h-24 shadow-sm bg-gradient-to-r from-customBlack to-gray-800 2xl:px-[25%] xl:px-44 md:px-20 px-0 z-10">
       <div className="flex justify-between items-center h-full w-full px-4">
         <div
           data-tip="RS Portfolio means Rolando Sanchez Portfolio"
