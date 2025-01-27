@@ -42,3 +42,9 @@ body {
   mix-blend-mode: difference;
   filter: blur(150px);
 }
+
+@media (max-width: 768px) {
+  .custom-cursor {
+    display: none;
+  }
+}
