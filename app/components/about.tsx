@@ -8,12 +8,13 @@ export default function About() {
         <div className="flex justify-center flex-col md:flex-row">
           <div className="mt-0 md:mt-10 w-[250px] h-[250px] rounded-full overflow-hidden">
             <Image
-              src="/img/IMG_2259.jpg"
-              width={250}
-              height={250}
+              src="/img/IMG_2259.JPG"
+              width={1080}
+              height={300}
               alt="Profile Picture"
               className="object-cover object-center"
               priority
+              unoptimized
             />
           </div>
           <div className="w-64 md:w-80 lg:w-3/4 mt-0 lg:mt-16 p-5 space-y-2">
