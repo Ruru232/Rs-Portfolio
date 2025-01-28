@@ -4,6 +4,7 @@ const certificateImages = [
   '/img/certificates/370234943_638829084847279_4535006700634153758_n.jpg',
   '/img/certificates/CERTIFICATE FOR TRAINEES - ROLANDO_2-1.png',
   '/img/certificates/Certificate of Completion - Rolando Sanchez-1.png',
+  '/img/certificates/10_Sanchez, Rolando L._2-1.png',
   '/img/certificates/image7.jpg',
   '/img/certificates/image1.jpg',
   '/img/certificates/image6.jpg',
