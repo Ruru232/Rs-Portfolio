@@ -9,8 +9,8 @@ export default function About() {
           <div className="mt-0 md:mt-10 w-[250px] h-[250px] rounded-full overflow-hidden">
             <Image
               src="/img/IMG_2259.jpg"
-              width={1080}
-              height={300}
+              width={250}
+              height={250}
               alt="Profile Picture"
               className="object-cover object-center"
               priority
