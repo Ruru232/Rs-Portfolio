@@ -10,7 +10,7 @@ export default function Project() {
       description:
         'This is a portfolio landing page showcasing various projects and skills. It serves as a personal website to highlight professional achievements and experiences.',
       url: '/',
-      github: '/',
+      github: 'https://github.com/Ruru232/Rs-Portfolio',
     },
     {
       name: 'project2',
