@@ -6,17 +6,17 @@ export default function About() {
     <div>
       <div className="flex flex-wrap justify-center mx-[5%] 2xl:mx-[25%] mt-28 p-1 ">
         <div className="flex justify-center flex-col md:flex-row">
-          <div className="mt-0 md:mt-2 w-[250px]">
+          <div className="mt-0 md:mt-10 w-[250px] h-[250px] rounded-full overflow-hidden">
             <Image
               src="/img/IMG_2259.jpg"
               width={1080}
               height={300}
               alt="Profile Picture"
-              className="rounded-lg"
+              className="object-cover object-center"
               priority
             />
           </div>
-          <div className="w-64 md:w-80 lg:w-3/4 mt-0 lg:mt-24  p-5 space-y-2">
+          <div className="w-64 md:w-80 lg:w-3/4 mt-0 lg:mt-16 p-5 space-y-2">
             <h2>Introduction:</h2>
             <p>
               Hi, I'm Rolando Sanchez, a passionate and driven aspiring Junior
@@ -26,6 +26,12 @@ export default function About() {
               pursuing my dream of crafting intuitive and engaging web
               applications.
             </p>
+            <div className="relative inline-block">
+              <div className="absolute inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              <button className="relative px-7 py-4 bg-customBlack rounded-lg leading-none">
+                Download my CV
+              </button>
+            </div>
           </div>
         </div>
       </div>

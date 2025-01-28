@@ -5,6 +5,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --text-color: #ededed; 
+ 
 }
 
 @layer utilities {
@@ -20,11 +22,12 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --text-color: #ededed; 
   }
 }
 
 body {
-  color: var(--foreground);
+  color: var(--text-color);
   background: var(--background);
   @apply font-primary;
 }
