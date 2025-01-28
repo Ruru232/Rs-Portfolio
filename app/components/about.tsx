@@ -19,12 +19,12 @@ export default function About() {
           <div className="w-64 md:w-80 lg:w-3/4 mt-0 lg:mt-16 p-5 space-y-2">
             <h2>Introduction:</h2>
             <p>
-              Hi, I'm Rolando Sanchez, a passionate and driven aspiring Junior
-              Software Engineer from Las Piñas City, Philippines. With a solid
-              foundation in computer technology and front-end development, I've
-              transitioned from a hands-on role as a computer technician to
-              pursuing my dream of crafting intuitive and engaging web
-              applications.
+              Hi, I&apos;m Rolando Sanchez, a passionate and driven aspiring
+              Junior Software Engineer from Las Piñas City, Philippines. With a
+              solid foundation in computer technology and front-end development,
+              I&apos;ve transitioned from a hands-on role as a computer
+              technician to pursuing my dream of crafting intuitive and engaging
+              web applications.
             </p>
             <div className="relative inline-block">
               <div className="absolute inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>

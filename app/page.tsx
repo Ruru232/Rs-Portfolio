@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Home() {
@@ -14,7 +13,7 @@ export default function Home() {
         <div className="absolute">
           <div className="lg:text-5xl md:text-4xl text-lg space-y-2 text-center">
             <p className="bg-gradient-to-r from-pink-600 to-yellow-500 bg-clip-text text-transparent ">
-              Hello, I'm Rolando Sanchez,
+              Hello, I&apos;m Rolando Sanchez,
             </p>
             <p>aspiring developer</p>
           </div>
