@@ -33,10 +33,22 @@ export default function Navbar() {
               <Link href="/About_Me">About Me</Link>
             </li>
             <li>
-              <AiOutlineLinkedin size={30} />
+              <Link
+                href="https://www.linkedin.com/in/rolando-sanchez-435125174/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineLinkedin size={30} />
+              </Link>
             </li>
             <li>
-              <AiOutlineGithub size={30} />
+              <Link
+                href="https://github.com/Ruru232"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineGithub size={30} />
+              </Link>
             </li>
           </ul>
         </div>
@@ -74,8 +86,20 @@ export default function Navbar() {
               <Link href="/About_Me">About Me</Link>
             </li>
             <div className="flex flex-row justify-around pt-10 items-center">
-              <AiOutlineLinkedin size={30} />
-              <AiOutlineGithub size={30} />
+              <Link
+                href="https://www.linkedin.com/in/rolando-sanchez-435125174/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineLinkedin size={30} />
+              </Link>
+              <Link
+                href="https://github.com/Ruru232"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <AiOutlineGithub size={30} />
+              </Link>
             </div>
           </ul>
         </div>
