@@ -4,7 +4,7 @@ import { useState } from 'react';
 import About from '../components/about';
 import Certificates from '../components/Certificates';
 
-export default function page() {
+export default function Page() {
   const [activeTab, setActiveTab] = useState<'about' | 'cert'>('about');
   return (
     <div className="flex flex-col items-center mt-28 p-5">

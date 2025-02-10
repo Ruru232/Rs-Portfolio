@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Certificates from './Certificates';
 
 export default function About() {
   return (
