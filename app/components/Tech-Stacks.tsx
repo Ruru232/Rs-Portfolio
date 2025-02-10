@@ -30,7 +30,7 @@ const getLevelPercentage = (level: string) => {
 
 export default function TechStacks() {
   return (
-    <div className="flex flex-wrap justify-center mx-[5%] 2xl:mx-[25%] mt-10 p-5">
+    <div className="flex flex-wrap justify-center mx-[5%] 2xl:mx-[25%] p-5">
       <div className="w-full  p-6">
         <h2 className="text-2xl font-bold mb-6 text-center">Tech Stacks</h2>
         <ul className="space-y-4">

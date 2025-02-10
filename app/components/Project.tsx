@@ -1,103 +1,95 @@
+'use client';
+
 import Image from 'next/image';
-import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/effect-flip';
+import { AiOutlineGithub } from 'react-icons/ai';
+import ArrowUpRightIcon from './ArrowUpRightIcon';
 
-export default function Project() {
-  const projects = [
-    {
-      name: 'project1',
-      src: '/img/project1.png',
-      title: 'Portfolio Landing Page',
-      description:
-        'This is a portfolio landing page showcasing various projects and skills. It serves as a personal website to highlight professional achievements and experiences.',
-      url: '/',
-      github: 'https://github.com/Ruru232/Rs-Portfolio',
-    },
-    {
-      name: 'project2',
-      src: '/img/project2.png',
-      title: 'The Simple Black Jack Game',
-      description:
-        'This is a Black Jack game built using modern web technologies. It provides an interactive way to play the classic card game online. The game features user-friendly interface.',
-      url: 'https://second-project-dusky.vercel.app/',
-      github: 'https://github.com/Ruru232/second-project',
-    },
-    {
-      name: 'project3',
-      src: '/img/project3.png',
-      title: 'E-commerce Website (Fake Store API)',
-      description:
-        'This is an e-commerce website designed to facilitate online shopping. It features product listings, a shopping cart, and a checkout process.',
-      url: 'https://fourth-project-iota.vercel.app/',
-      github: 'https://github.com/Ruru232/fourth-project',
-    },
-    {
-      name: 'project4',
-      src: '/img/project4.png',
-      title: 'Deadpool and Wolverine Website',
-      description:
-        'This is a website dedicated to Deadpool and Wolverine. It includes information about the characters, their stories, and related media content.',
-      url: 'https://codebility-third-project.vercel.app/',
-      github: 'https://github.com/jebsonubaldo/codebility-third-project',
-    },
-  ];
+interface Project {
+  name: string;
+  src: string;
+  title: string;
+  description: string;
+  url: string;
+  github: string;
+}
 
+const Project = ({ projects }: { projects: Project[] }) => {
   return (
-    <div>
-      <div className="flex flex-wrap mx-[5%] 2xl:mx-[25%] mt-28 p-5">
-        <div className="flex justify-center w-full mb-10">
-          <h1 className="text-base md:text-2xl">Projects</h1>
-        </div>
-        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 ">
+    <div className="relative flex flex-col">
+      <div className="swiper-pagination text-white"></div>
+
+      <div className="relative w-full max-w-80 md:max-w-xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl">
+        <Swiper
+          navigation={{
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+          }}
+          pagination={{ type: 'fraction', el: '.swiper-pagination' }}
+          modules={[EffectFlip, Pagination, Navigation]}
+          grabCursor={true}
+          slidesPerView={1}
+          spaceBetween={30}
+          effect={'flip'}
+          className="w-full"
+        >
           {projects.map((project, index) => (
-            <div
-              key={index}
-              className="p-1 bg-gradient-to-tr from-borderColor2 to-borderColor3 via-borderColor2 rounded-lg"
-            >
-              <div className="bg-customBlack p-2 h-full">
-                <div className="flex justify-center items-center py-8">
-                  <h2 className="text-base md:text-2xl">{project.title}</h2>
-                </div>
-                <Image
-                  src={project.src}
-                  alt={project.name}
-                  width={1080}
-                  height={699}
-                  priority
-                />
-                <div className="flex justify-center items-center p-2">
-                  <p className="text-sm">{project.description}</p>
-                </div>
-                <div className="py-5 flex flex-col sm:flex-row justify-center items-center gap-4 ">
-                  <div className="relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                    <Link
-                      href={project.url}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <button className="relative px-7 py-4 bg-customBlack rounded-lg leading-none ">
-                        Live preview
-                      </button>
-                    </Link>
+            <SwiperSlide key={index}>
+              <div className="group relative w-full h-[400px] md:h-[500px] lg:h-[600px] perspective">
+                <div className="relative w-full h-full transform-style-preserve-3d transition-transform duration-700 group-hover:rotate-y-180">
+                  <div className="absolute w-full h-full flex flex-col text-white p-4 text-center transform rotate-y-180 backface-hidden rounded-lg">
+                    <h2 className="text-lg font-bold">{project.title}</h2>
+                    <Image
+                      src={project.src}
+                      alt={project.name}
+                      width={1080}
+                      height={699}
+                      className="w-full h-full object-cover rounded-lg"
+                      {...(index === 0
+                        ? { priority: true }
+                        : { loading: 'lazy' })}
+                    />
                   </div>
-                  <div className="relative group">
-                    <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
-                    <Link
-                      href={project.github}
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <button className="relative px-7 py-4 bg-customBlack rounded-lg leading-none ">
-                        Check on GitHub
-                      </button>
-                    </Link>
-                  </div>
+                </div>
+                <p className="text-sm md:text-base p-4">
+                  {project.description}
+                </p>
+                <div className=" space-x-4 flex justify-center items-center">
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white hover:underline flex justify-center items-center border border-blue-500 bg-customBlack rounded-lg w-44 p-2.5"
+                  >
+                    Live Preview <ArrowUpRightIcon className="inline" />
+                  </a>
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-white hover:underline flex justify-center items-center border border-blue-500 bg-customBlack rounded-lg w-44 p-2"
+                  >
+                    GitHub <AiOutlineGithub size={25} className="inline mb-1" />
+                  </a>
                 </div>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
+        </Swiper>
+        <div className="custom-prev absolute -top-3 left-16 md:left-48 lg:left-72 xl:left-80 2xl:left-96 transform -translate-y-1/2 cursor-pointer z-10 text-white p-2 rounded-md">
+          ← Prev
+        </div>
+        <div className="custom-next absolute -top-3 right-16 md:right-48 lg:right-72 xl:right-80 2xl:right-96 transform -translate-y-1/2 cursor-pointer z-10 text-white p-2 rounded-md">
+          Next →
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Project;
