@@ -35,6 +35,7 @@ const Project = ({ projects }: { projects: Project[] }) => {
           grabCursor={true}
           slidesPerView={1}
           spaceBetween={30}
+          loop={true}
           effect={'flip'}
           className="w-full"
         >
@@ -66,7 +67,7 @@ const Project = ({ projects }: { projects: Project[] }) => {
                     rel="noreferrer"
                     className="text-white hover:underline flex justify-center items-center border border-blue-500 bg-customBlack rounded-lg w-44 p-2.5"
                   >
-                    Live Preview <ArrowUpRightIcon className="inline" />
+                    Preview <ArrowUpRightIcon className="inline" />
                   </a>
                   <a
                     href={project.github}
@@ -81,10 +82,10 @@ const Project = ({ projects }: { projects: Project[] }) => {
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="custom-prev absolute -top-3 left-16 md:left-48 lg:left-72 xl:left-80 2xl:left-96 transform -translate-y-1/2 cursor-pointer z-10 text-white p-2 rounded-md">
+        <div className="custom-prev absolute -top-3 left-12 md:left-44 lg:left-64 xl:left-80 2xl:left-96 transform -translate-y-1/2 cursor-pointer z-10 text-white p-2 rounded-md">
           ← Prev
         </div>
-        <div className="custom-next absolute -top-3 right-16 md:right-48 lg:right-72 xl:right-80 2xl:right-96 transform -translate-y-1/2 cursor-pointer z-10 text-white p-2 rounded-md">
+        <div className="custom-next absolute -top-3 right-12 md:right-44 lg:right-64 xl:right-80 2xl:right-96 transform -translate-y-1/2 cursor-pointer z-10 text-white p-2 rounded-md">
           Next →
         </div>
       </div>
