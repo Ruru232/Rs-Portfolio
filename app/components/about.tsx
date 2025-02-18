@@ -88,7 +88,7 @@ export default function About() {
               <div className="border-l-4 border-blue-500 pl-4">
                 <p className="font-semibold">BS in Computer Science</p>
                 <p className="text-sm text-gray-600">
-                  2020-2024 at Pamantasan ng Lungsod ng Muntinlupa
+                  2020-2022 at Pamantasan ng Lungsod ng Muntinlupa
                 </p>
               </div>
               <div className="border-l-4 border-blue-500 pl-4">
